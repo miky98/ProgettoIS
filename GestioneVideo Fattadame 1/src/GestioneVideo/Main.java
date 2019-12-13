@@ -57,6 +57,12 @@ public class Main {
 		data_evento = LocalDate.of(2019, Month.SEPTEMBER, 7);
 
 		VideoApprofondimento v5 = new VideoApprofondimento(nome_evento, data_evento, Sport.CALCIO);
+		
+		nome_evento = "Partita Inter-Napoli";
+
+		data_evento = LocalDate.of(2019, Month.AUGUST, 24);
+
+		VideoEvento v6 = new VideoEvento(nome_evento, data_evento, Sport.CALCIO);
 
 		v4.addGiornalista(new Giornalista("TIZIO", "CAIO"));
 		v4.addGiornalista(new Giornalista("PIPPO", "PLUTO"));
@@ -67,6 +73,7 @@ public class Main {
 		gestionevideo.caricaVideo(v3);
 		gestionevideo.caricaVideo(v4);
 		gestionevideo.caricaVideo(v5);
+		gestionevideo.caricaVideo(v6);
 
 		ArrayList<Video> v_ricerca = gestionevideo.ricercaVideo(Sport.CALCIO, "Napoli");
 
@@ -85,6 +92,7 @@ public class Main {
 		gestionevideo.rimuoviVideo(v3);
 		gestionevideo.rimuoviVideo(v4);
 		gestionevideo.rimuoviVideo(v5);
+		gestionevideo.rimuoviVideo(v6);
 	
 	}
 
