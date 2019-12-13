@@ -1,0 +1,73 @@
+2019-12-10 09:14:07 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/micha/eclipse-workspace/GestioneVideo Fattadame 1/DBgestionevideo.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at Database.DBManager.getConnection(DBManager.java:17)
+	at GestioneVideo.InizializzaDB.main(InizializzaDB.java:15)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/micha/eclipse-workspace/GestioneVideo Fattadame 1/DBgestionevideo.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 26 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/micha/eclipse-workspace/GestioneVideo Fattadame 1/DBgestionevideo.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 20 more
+2019-12-12 16:06:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "VIDEO" already exists; SQL statement:
+CREATE TABLE VIDEO( ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, NOME VARCHAR(30), DATA DATE, SPORT VARCHAR(30), TIPO VARCHAR(30)); [42101-199]
+2019-12-12 16:57:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'Evento Formula1 GP Monza00000005555' (35)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:05:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:06:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:09:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:10:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:12:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:15:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:16:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:16:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:17:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
+2019-12-12 17:18:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column """NOME"" VARCHAR(30)": "'GP MonzaCiaoTiVoglioBeneghfjkgiurgfiure' (39)"; SQL statement:
+INSERT INTO VIDEO VALUES(NULL,?,?,?,?); [22001-199]
